@@ -12,5 +12,5 @@
           class="coachapp.service.HappyFortuneService"/>
 
     <bean id="coach"
-          class="coachapp.BaseballCoach"><constructor-arg ref="fortuneService"/></bean>
+          class="coachapp.BaseballCoach"><property name="fortuneService" ref="fortuneService"/></bean>
 </beans>
