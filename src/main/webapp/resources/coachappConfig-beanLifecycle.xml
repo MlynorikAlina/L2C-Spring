@@ -11,7 +11,7 @@
           class="coachapp.service.RandomFortuneService"/>
 
     <bean id="coach"
-          class="coachapp.TrackCoach" scope="prototype">
+          class="coachapp.TrackCoach" init-method="init" destroy-method="destroy">
         <property name="fortuneService" ref="fortuneServiceBean"/>
         <property name="team" value="${foo.team}"/>
     </bean>

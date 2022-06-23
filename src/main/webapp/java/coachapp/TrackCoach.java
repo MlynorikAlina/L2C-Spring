@@ -14,4 +14,11 @@ public class TrackCoach extends Coach{
         return "run 10 km ";
     }
 
+    private void init(){
+        System.out.println("TrackCoach: in init method");
+    }
+
+    private void destroy(){
+        System.out.println("TrackCoach: in destroy method");
+    }
 }
