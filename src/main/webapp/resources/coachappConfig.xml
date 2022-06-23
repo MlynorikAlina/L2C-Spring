@@ -7,6 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:coachapp.properties"/>
 
     <bean id="fortuneServiceBean"
           class="coachapp.service.HappyFortuneService"/>
@@ -14,6 +15,6 @@
     <bean id="coach"
           class="coachapp.TrackCoach">
         <property name="fortuneService" ref="fortuneServiceBean"/>
-        <property name="team" value="Yankies"/>
+        <property name="team" value="${foo.team}"/>
     </bean>
 </beans>
