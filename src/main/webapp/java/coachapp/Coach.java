@@ -4,6 +4,7 @@ import coachapp.service.FortuneService;
 
 public abstract class Coach {
     private FortuneService fortuneService;
+    private String team;
 
     public Coach() {
     }
@@ -15,6 +16,14 @@ public abstract class Coach {
 
     public String getFortuneService(){
         return fortuneService.getFortune();
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
     }
 
     public void setFortuneService(FortuneService fortuneService) {

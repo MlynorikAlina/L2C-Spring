@@ -12,5 +12,8 @@
           class="coachapp.service.HappyFortuneService"/>
 
     <bean id="coach"
-          class="coachapp.TrackCoach"><property name="fortuneService" ref="fortuneServiceBean"/></bean>
+          class="coachapp.TrackCoach">
+        <property name="fortuneService" ref="fortuneServiceBean"/>
+        <property name="team" value="Yankies"/>
+    </bean>
 </beans>
