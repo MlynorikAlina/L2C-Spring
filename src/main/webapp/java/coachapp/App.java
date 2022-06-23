@@ -9,6 +9,6 @@ public class App {
                      new ClassPathXmlApplicationContext("coachappConfig.xml")) {
             coach = applicationContext.getBean("coach", Coach.class);
         }
-        System.out.println(coach.getTeam());
+        System.out.println(coach.getFortuneService());
     }
 }

@@ -10,7 +10,7 @@
     <context:property-placeholder location="classpath:coachapp.properties"/>
 
     <bean id="fortuneServiceBean"
-          class="coachapp.service.HappyFortuneService"/>
+          class="coachapp.service.RandomFortuneService"/>
 
     <bean id="coach"
           class="coachapp.TrackCoach">
