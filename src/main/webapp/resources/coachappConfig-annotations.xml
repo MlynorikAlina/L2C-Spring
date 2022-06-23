@@ -7,12 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="fortuneServiceBean"
-          class="coachapp.service.RandomFortuneService"/>
 
-    <bean id="coach"
-          class="coachapp.TrackCoach" init-method="init" destroy-method="destroy">
-        <property name="fortuneService" ref="fortuneServiceBean"/>
-        <property name="team" value="${foo.team}"/>
-    </bean>
+    <context:component-scan base-package="annotations"/>
 </beans>

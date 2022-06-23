@@ -1,0 +1,12 @@
+package annotations.coachapp;
+
+import org.springframework.stereotype.Component;
+
+@Component("baseballCoach")
+public class BaseballCoach extends Coach {
+
+    @Override
+    public String getDailyWorkout() {
+        return "spend 30 minutes on batting field";
+    }
+}
