@@ -8,6 +8,9 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
 
+    <bean id="fortuneService"
+          class="coachapp.service.HappyFortuneService"/>
+
     <bean id="coach"
-          class="coachapp.TrackCoach"/>
+          class="coachapp.BaseballCoach"><constructor-arg ref="fortuneService"/></bean>
 </beans>
