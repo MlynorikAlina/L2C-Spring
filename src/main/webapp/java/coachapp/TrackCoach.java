@@ -3,6 +3,8 @@ package coachapp;
 import coachapp.service.FortuneService;
 
 public class TrackCoach extends Coach{
+    public TrackCoach() {
+    }
 
     public TrackCoach(FortuneService fortuneService) {
         super(fortuneService);

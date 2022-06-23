@@ -3,6 +3,8 @@ package coachapp;
 import coachapp.service.FortuneService;
 
 public class BaseballCoach extends Coach {
+    public BaseballCoach() {
+    }
 
     public BaseballCoach(FortuneService fortuneService) {
         super(fortuneService);
