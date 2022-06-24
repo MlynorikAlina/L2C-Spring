@@ -6,10 +6,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BaseballCoach extends Coach {
-    @Autowired
-    public BaseballCoach(FortuneService fortuneService) {
-        super(fortuneService);
-    }
 
     @Override
     public String getDailyWorkout() {
