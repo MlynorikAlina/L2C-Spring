@@ -7,7 +7,7 @@ public class App {
         try (ClassPathXmlApplicationContext context =
                      new ClassPathXmlApplicationContext("coachappConfig-annotations.xml")) {
             Coach coach = context.getBean("baseballCoach", Coach.class);
-            System.out.println(coach.getDailyWorkout());
+            System.out.println(coach.getFortuneService());
         }
     }
 }
