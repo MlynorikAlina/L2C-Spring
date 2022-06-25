@@ -1,13 +1,13 @@
 package annotations.coachapp;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App {
     public static void main(String[] args) {
-        try (ClassPathXmlApplicationContext context =
-                     new ClassPathXmlApplicationContext("coachappConfig-annotations.xml")) {
+        try (AnnotationConfigApplicationContext context =
+                     new AnnotationConfigApplicationContext(JavaAppConfig.class)) {
             Coach coach = context.getBean("baseballCoach", Coach.class);
-            System.out.println(coach.getTeam());
+            System.out.println(coach.getFortuneService());
         }
     }
 }

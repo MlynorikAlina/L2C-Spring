@@ -9,8 +9,6 @@ public abstract class Coach {
     @Autowired
     @Qualifier("foo")
     private FortuneService fortuneService;
-    @Value("${foo.team}")
-    private String team;
 
     public abstract String getDailyWorkout();
     
@@ -18,7 +16,4 @@ public abstract class Coach {
         return fortuneService.getFortune();
     }
 
-    public String getTeam() {
-        return team;
-    }
 }
