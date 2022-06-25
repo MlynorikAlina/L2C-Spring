@@ -4,6 +4,7 @@ import annotations.coachapp.service.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class Coach {
+    @Autowired
     private FortuneService fortuneService;
 
     public abstract String getDailyWorkout();
@@ -11,8 +12,5 @@ public abstract class Coach {
     public String getFortuneService(){
         return fortuneService.getFortune();
     }
-    @Autowired
-    public void injectSomeFortuneService(FortuneService fortuneService) {
-        this.fortuneService = fortuneService;
-    }
+
 }
