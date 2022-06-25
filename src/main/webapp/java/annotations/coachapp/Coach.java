@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public abstract class Coach {
     @Autowired
-    @Qualifier("unhappyFortuneService")
+    @Qualifier("foo")
     private FortuneService fortuneService;
 
     public abstract String getDailyWorkout();
