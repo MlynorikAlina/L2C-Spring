@@ -12,7 +12,7 @@ public abstract class Coach {
         return fortuneService.getFortune();
     }
     @Autowired
-    public void setFortuneService(FortuneService fortuneService) {
+    public void injectSomeFortuneService(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 }
