@@ -7,8 +7,7 @@ public class App {
         try (ClassPathXmlApplicationContext context =
                      new ClassPathXmlApplicationContext("coachappConfig-annotations.xml")) {
             Coach coach = context.getBean("baseballCoach", Coach.class);
-            Coach bCoach = context.getBean("baseballCoach", Coach.class);
-            System.out.println(coach==bCoach);
+            System.out.println(coach.getTeam());
         }
     }
 }
