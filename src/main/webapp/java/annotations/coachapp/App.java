@@ -6,8 +6,8 @@ public class App {
     public static void main(String[] args) {
         try (AnnotationConfigApplicationContext context =
                      new AnnotationConfigApplicationContext(JavaAppConfig.class)) {
-            Coach coach = context.getBean("baseballCoach", Coach.class);
-            System.out.println(coach.getFortuneService());
+            BaseballCoach coach = context.getBean("baseballCoach", BaseballCoach.class);
+            System.out.println(coach.getTeam());
         }
     }
 }

@@ -4,16 +4,11 @@ import annotations.coachapp.service.HappyFortuneService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-//@ComponentScan("annotations.coachapp")
+@PropertySource("coachapp.properties")
+@ComponentScan("annotations.coachapp")
 public class JavaAppConfig {
-    @Bean
-    public HappyFortuneService happyFortuneService(){
-        return new HappyFortuneService();
-    }
-    @Bean
-    public BaseballCoach baseballCoach(){
-        return new BaseballCoach(happyFortuneService());
-    }
+
 }
