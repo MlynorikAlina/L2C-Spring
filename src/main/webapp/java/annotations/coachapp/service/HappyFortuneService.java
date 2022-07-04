@@ -1,8 +1,5 @@
 package annotations.coachapp.service;
 
-import org.springframework.stereotype.Component;
-
-@Component("foo")
 public class HappyFortuneService implements FortuneService {
     @Override
     public String getFortune() {

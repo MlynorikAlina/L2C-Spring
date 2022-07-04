@@ -1,15 +1,16 @@
 package annotations.coachapp;
 
 import annotations.coachapp.service.FortuneService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
+
 public class BaseballCoach extends Coach {
+    public BaseballCoach(FortuneService fortuneService) {
+        super(fortuneService);
+    }
+
     @PostConstruct
     public void doInit(){
         System.out.println("init");
